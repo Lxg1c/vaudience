@@ -1,0 +1,25 @@
+// _variables.scss
+
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Play:wght@400;700&family=Tenor+Sans&display=swap");
+
+// font-family
+$Fahkwang-family: "Fahkwang", sans-serif;
+$Tenor-family: "Tenor Sans", sans-serif;
+
+// colors
+$primary-color: #212529;
+$secondary-color: #ffffff;
+$success-color: #2bd05a;
+$error-color: #dc3545;
+$disable-color: #9d9d9d;
+
+// font-size
+$title-1-size: 50px;
+$title-2-size: 45px;
+$title-4-size: 18px;
+
+// font-weight
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;

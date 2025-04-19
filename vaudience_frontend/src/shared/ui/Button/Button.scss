@@ -1,0 +1,19 @@
+@use "@/shared/styles/variables" as vars;
+
+.button {
+  background-color: vars.$primary-color;
+  color: vars.$secondary-color;
+  width: 100%;
+  font-size: vars.$title-4-size;
+  padding: 15px 40px;
+  border-radius: 3px;
+  transition: 0.2s ease-in;
+
+  &:hover {
+    background-color: #151515;
+  }
+
+  &:disabled {
+    background-color: #9d9d9d;
+  }
+}

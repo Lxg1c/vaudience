@@ -1,0 +1,63 @@
+@use "@/shared/styles/variables" as vars;
+
+// ProductList.scss
+.products {
+  padding: 40px 0 200px;
+  &__container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font: {
+      size: 20px;
+      family: vars.$Fahkwang-family;
+      weight: 600;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 340px;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    display: block;
+    padding: 20px;
+    background-color: vars.$secondary-color;
+  }
+
+  &__wrapper {
+    margin-top: 10px;
+
+    &-name,
+    &-price {
+      text-align: center;
+      color: vars.$primary-color;
+      font-family: vars.$Fahkwang-family;
+      margin: 5px 0;
+    }
+
+    &-name {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    &-price {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+}

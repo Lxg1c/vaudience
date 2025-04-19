@@ -1,0 +1,22 @@
+services:
+  api:
+    build:
+      context: vaudience_backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    container_name: vaudience_backend
+    volumes:
+      - ./vaudience_backend:/app
+    restart: on-failure
+
+  frontend:
+    build:
+      context: vaudience_frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    container_name: vaudience_frontend
+    # volumes:
+    #   - ./vaudience_frontend:/app
+    restart: on-failure

@@ -1,0 +1,191 @@
+@use "@/shared/styles/variables" as vars;
+@use "sass:color";
+
+.cart {
+  height: 100vh;
+
+  &__loader {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 100%;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 160px;
+    width: 100%; // Обеспечивает растяжение по ширине
+  }
+
+  &__content {
+    flex: 1;
+    margin-right: 24px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; // Растягиваем список по ширине
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    width: 100%; // Растягиваем на всю ширину родительского контейнера
+    flex-grow: 1; // Делаем элемент гибким, чтобы он занимал все доступное пространство
+
+    &-left {
+      display: flex;
+      gap: 20px;
+      flex-grow: 1; // Обеспечиваем гибкость для левой части
+    }
+
+    &-title {
+      font: {
+        weight: vars.$bold;
+        size: vars.$title-4-size;
+      }
+      text-decoration: underline;
+      color: vars.$primary-color;
+    }
+
+    &-img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    &-details {
+      width: 100%;
+      padding: 24px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-price-wrapper {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    &-price {
+      margin: 0;
+      font: {
+        family: vars.$Fahkwang-family;
+        size: 32px;
+        weight: 600;
+      }
+    }
+
+    &-btn--delete {
+      width: 50px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__summary {
+    height: 75vh;
+    padding: 24px;
+    border: 1px solid vars.$primary-color;
+    border-radius: 8px;
+    width: 470px;
+
+    &-title {
+      margin: 0 0 20px 0;
+      font: {
+        family: vars.$Fahkwang-family;
+        weight: 700;
+        size: 32px;
+      }
+    }
+
+    &-count-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    &-count {
+      margin: 0;
+      font: {
+        family: vars.$Fahkwang-family;
+        weight: 500;
+        size: 18px;
+      }
+    }
+
+    &-result-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    &-result {
+      margin: 0;
+      font: {
+        family: vars.$Fahkwang-family;
+        weight: 600;
+        size: 24px;
+      }
+
+      &:after {
+        display: block;
+        content: "Без учета возможной доставки";
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+
+  &__promo-code-wrapper {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  &__promo-code-input {
+    width: 100%;
+    padding-right: 120px;
+  }
+
+  &__promo-code-button {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    background-color: vars.$primary-color;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font: {
+      family: vars.$Fahkwang-family;
+      size: 14px;
+      weight: 600;
+    }
+
+    &:hover {
+      background-color: color.scale(vars.$primary-color, $lightness: -10%);
+    }
+  }
+}

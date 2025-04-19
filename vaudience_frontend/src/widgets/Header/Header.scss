@@ -1,0 +1,82 @@
+@use "@/shared/styles/variables" as vars;
+
+$hover-color: rgb(139, 185, 254);
+
+.header {
+  background-color: vars.$primary-color;
+  color: vars.$secondary-color;
+  padding: 10px 0;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+    margin: 0 20px;
+  }
+
+  &__user {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+
+    &-icon {
+      background-color: vars.$primary-color;
+    }
+  }
+
+  &__bash,
+  &__bookmark {
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+    position: relative;
+
+    &-counter {
+      background: vars.$primary-color;
+      padding: 1px 5px;
+      border-radius: 30px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(0%, 0%);
+      color: vars.$secondary-color;
+      font: {
+        size: 12px;
+        weight: 600;
+        family: vars.$Tenor-family;
+      }
+    }
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-item {
+    font: {
+      size: 20px;
+      family: vars.$Tenor-family;
+    }
+  }
+}
