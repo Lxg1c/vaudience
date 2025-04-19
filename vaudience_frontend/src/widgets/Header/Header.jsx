@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Dropdown, Container, Nav, Navbar } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import UserIcon from "@/assets/user.svg";
 import Logo from "@/assets/logo.svg";
 import Bookmark from "@/assets/bookmark.svg";
@@ -61,24 +61,33 @@ const Header = () => {
       <div className="header__container container">
         {/* Левая часть: меню */}
         <div className="header__menu">
-          <Navbar bg="dark" data-bs-theme="dark">
-            <Container>
-              <Nav className="me-auto">
-                <Nav.Link as={Link} to="/#news" onClick={clearCategory}>
+          <nav className="navigation-menu">
+            <ul className="navigation-menu__list">
+              <li className="navigation-menu-link btn-reset">
+                <Link to="/" onClick={clearCategory}>
                   НОВИНКИ
-                </Nav.Link>
-                <Nav.Link as={Link} to="/#news" onClick={() => changeCategory(2)}>
+                </Link>
+              </li>
+
+              <li className="navigation-menu-link btn-reset">
+                <Link to="/#news" onClick={() => changeCategory(2)}>
                   ОДЕЖДА
-                </Nav.Link>
-                <Nav.Link as={Link} to="/#news" onClick={() => changeCategory(6)}>
+                </Link>
+              </li>
+
+              <li className="navigation-menu-link btn-reset">
+                <Link to="/#news" onClick={() => changeCategory(6)}>
                   АКСЕССУАРЫ
-                </Nav.Link>
-                <Nav.Link as={Link} to="/about">
+                </Link>
+              </li>
+
+              <li className="navigation-menu-link btn-reset">
+                <Link to="/about">
                   О НАС
-                </Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
 
         {/* Центральная часть: логотип */}
