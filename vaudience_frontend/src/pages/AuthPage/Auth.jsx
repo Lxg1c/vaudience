@@ -6,8 +6,8 @@ import Button from "@/shared/ui/Button/Button.jsx";
 import Checkbox from "@/shared/ui/Checkbox/Checkbox.jsx";
 import { useDispatch } from "react-redux";
 import { registerUser, loginUser, aboutUser } from "@/enteties/user/index.js";
-import { Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import Loader from "@/shared/ui/Loader/Loader.jsx";
 
 const Auth = () => {
   const dispatch = useDispatch();
@@ -153,7 +153,7 @@ const Auth = () => {
     <div className="auth__container" style={{ position: "relative" }}>
       {isLoading && (
         <div className="loading-overlay">
-          <Spinner animation="border" role="status" />
+          <Loader />
         </div>
       )}
       <motion.section
