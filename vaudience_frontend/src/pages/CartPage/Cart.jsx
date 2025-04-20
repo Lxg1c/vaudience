@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect, useCallback } from "react"; // Именованный импорт. Забирает конкретные хуки из библиотеки React
 import "./Cart.scss"; // Импорт ресурса. Загружает SCSS, применяется как стили
-import CartItem from "@/pages/CartPage/CartItem.jsx"; // Импорт по умолчанию. Импортирует компонент по default-экспорту
-import CartSummary from "@/pages/CartPage/CartSummary.jsx";
+import CartItem from "@/features/Cart/CartItem.jsx"; // Импорт по умолчанию. Импортирует компонент по default-экспорту
+import CartSummary from "@/features/Cart/CartSummary.jsx";
 import { getProductById } from "@/enteties/product/index.js";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "@/shared/ui/Loader/Loader.jsx";

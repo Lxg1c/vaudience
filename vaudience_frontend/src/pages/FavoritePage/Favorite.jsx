@@ -1,7 +1,7 @@
 import "./Favorite.scss";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import FavoriteItem from "@/pages/FavoritePage/FavoriteItem.jsx";
+import FavoriteItem from "@/features/Favorite/FavoriteItem.jsx";
 
 const Favorite = () => {
   const favorite = useSelector((state) => state.favorite.favorite);
