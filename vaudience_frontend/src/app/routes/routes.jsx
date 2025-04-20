@@ -3,7 +3,7 @@ import Product from "@/pages/ProductPage/Product.jsx";
 import Cart from "@/pages/CartPage/Cart.jsx";
 import Auth from "@/pages/AuthPage/Auth.jsx";
 import { ROUTES } from "@/shared/lib/const.js";
-import ProductCard from "@/features/ProductCard/ProductCard.jsx";
+import ProductItem from "@/features/Product/ProductItem.jsx";
 import Favorite from "@/pages/FavoritePage/Favorite.jsx";
 import About from "@/pages/AboutPage/About.jsx";
 import Profile from "@/pages/ProfilePage/Profile.jsx";
@@ -17,7 +17,7 @@ const AppRoutes = () => {
 
       <Route path={ROUTES.LOGIN} element={<Auth />} />
 
-      <Route path={ROUTES.PRODUCT} element={<ProductCard />} />
+      <Route path={ROUTES.PRODUCT} element={<ProductItem />} />
 
       <Route path={ROUTES.FAVORITE} element={<Favorite />} />
 

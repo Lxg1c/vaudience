@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "./ProductCard.scss";
+import "./ProductItem.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { Carousel } from "react-bootstrap";
 import "@/shared/ui/Button/Button.scss";
@@ -10,7 +10,7 @@ import { addProductToCart } from "@/enteties/cart/index.js";
 import Loader from "@/shared/ui/Loader/Loader.jsx";
 import {addToFavorite, removeFromFavorite} from "@/enteties/favorite/index.js";
 
-const ProductCard = () => {
+const ProductItem = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const navigate = useNavigate();
@@ -196,4 +196,4 @@ const ProductCard = () => {
   );
 };
 
-export default ProductCard;
+export default ProductItem;
