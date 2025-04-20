@@ -9,6 +9,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          vendor: ['axios', "redux", 'react-redux']
+        }
+      }
+    }
+  },
   css: {
     preprocessorOptions: {
       scss: {
