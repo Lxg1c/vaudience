@@ -63,7 +63,7 @@
 #### Примеры:
 
 - `Header/` — собирает `features/Auth`, `features/Cart`, `features/Search`.
-- `ProductList/` — отрисовывает карточки из `features/ProductCard`, получает данные из `entities/product`.
+- `ProductList/` — отрисовывает карточки из `features/ProductItem`, получает данные из `entities/product`.
 
 ---
 
@@ -125,9 +125,9 @@ src/
 │       └── ...
 
 ├── features/                     # Фичи — законченное поведение (UI + логика)
-│   ├── ProductCard/              # Компонент карточки товара
-│   │   ├── ProductCard.jsx
-│   │   ├── ProductCard.module.scss
+│   ├── ProductItem/              # Компонент карточки товара
+│   │   ├── ProductItem.jsx
+│   │   ├── ProductItem.module.scss
 │   │   └── index.js
 │   ├── Menu/
 │   ├── Poster/
