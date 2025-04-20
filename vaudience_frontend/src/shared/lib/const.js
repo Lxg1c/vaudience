@@ -1,6 +1,4 @@
-import axios from "axios";
-
-export const BASE_URL_API = "http://localhost:8000";
+export const BASE_URL_API = "http://api:8000";
 
 export const ROUTES = {
   CART: "/cart",
@@ -11,7 +9,3 @@ export const ROUTES = {
   ABOUT: "/about",
   PROFILE: "/profile",
 };
-
-export const api = axios.create({
-  baseURL: `${BASE_URL_API}`,
-});
