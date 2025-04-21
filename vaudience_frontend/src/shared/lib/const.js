@@ -1,4 +1,4 @@
-export const BASE_URL_API = "http://api:8000";
+export const BASE_URL_API = "http://localhost:8000";
 
 export const ROUTES = {
   CART: "/cart",
