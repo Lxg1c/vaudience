@@ -1,0 +1,19 @@
+@use "@/shared/styles/variables" as vars;
+
+.dropdown__list-item {
+  width: 100%;
+  text-align: left;
+  color: vars.$primary-color;
+  background-color: vars.$secondary-color;
+  padding: 10px 5px;
+  border-radius: 3px;
+  font: {
+    weight: vars.$medium;
+    size: vars.$title-4-size;
+  }
+
+  &:hover {
+    color: vars.$secondary-color;
+    background-color: vars.$primary-color;
+  }
+}

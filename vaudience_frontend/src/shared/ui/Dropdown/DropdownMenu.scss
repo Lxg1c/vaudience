@@ -1,0 +1,17 @@
+@use "@/shared/styles/variables" as vars;
+
+.dropdown__menu {
+  position: absolute;
+  width: max-content;
+  left: -25px;
+  height: 120px;
+  background-color: vars.$secondary-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 20px;
+}
