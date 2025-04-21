@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Dropdown } from "react-bootstrap";
 import UserIcon from "@/assets/user.svg";
 import Logo from "@/assets/logo.svg";
 import Bookmark from "@/assets/bookmark.svg";
@@ -14,6 +13,11 @@ import { setActiveCategory } from "@/enteties/category/index.js";
 import { getUserCart } from "@/enteties/cart/api/api.js";
 import {clearFavorite, getFavorites} from "@/enteties/favorite/index.js";
 import {clearCart} from "@/enteties/cart/index.js";
+import Dropdown from "@/shared/ui/Dropdown/Dropdown.jsx";
+import DropdownToggle from "@/shared/ui/Dropdown/DropdownToggle.jsx";
+import DropdownMenu from "@/shared/ui/Dropdown/DropdownMenu.jsx";
+import DropdownItem from "@/shared/ui/Dropdown/DropdownItem.jsx";
+
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -101,25 +105,19 @@ const Header = () => {
         <div className="header__user">
           {/* Пользователь */}
           {currentUser && Object.keys(currentUser).length > 0 ? (
-            <Dropdown>
-              <Dropdown.Toggle
-                id="dropdown-button-dark-example2"
-                variant="secondary"
-                title="Пользователь"
-                data-bs-theme="dark"
-              >
-                <img src={UserIcon} alt="user" />
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item as={Link} to={ROUTES.PROFILE}>
-                  Профиль
-                </Dropdown.Item>
-                <Dropdown.Item as="button" onClick={loginOut}>
-                  Выйти
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+              <Dropdown>
+                <DropdownToggle>
+                  <img src={UserIcon} alt="user" />
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem as={Link} to={ROUTES.PROFILE}>
+                    Профиль
+                  </DropdownItem>
+                  <DropdownItem as="button" onClick={loginOut}>
+                    Выйти
+                  </DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
           ) : (
             <Link to="/login" title="Auth">
               <button className="btn-reset header__user-btn">
