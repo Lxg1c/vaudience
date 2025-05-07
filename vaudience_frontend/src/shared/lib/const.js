@@ -1,4 +1,4 @@
-export const BASE_URL_API = "http://45.153.70.81:8000";
+export const BASE_URL_API = process.env.REACT_APP_BASE_URL_API;
 
 export const ROUTES = {
   CART: "/cart",
